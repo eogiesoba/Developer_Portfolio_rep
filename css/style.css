@@ -756,7 +756,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   transform: scale(1);
 }
 
-#portfolio .portfolio-item a {
+#portfolio .portfolio-item .project {
   display: block;
   margin-right: 15px;
 }
@@ -784,6 +784,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   padding: 8px 0 2px 8px;
   margin: 0;
+}
+#portfolio .portfolio-item .details a {
+  color: #fff;
 }
 
 #portfolio .portfolio-item .details span {
