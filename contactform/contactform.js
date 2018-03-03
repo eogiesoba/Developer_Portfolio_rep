@@ -88,26 +88,44 @@ jQuery(document).ready(function($) {
         i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
-    if (ferror) return false;
-    else var str = $(this).serialize();
-    $.ajax({
-      type: "POST",
-      url: "contactform/contactform.php",
-      data: str,
-      success: function(msg) {
-        // alert(msg);
-        if (msg == 'OK') {
-          $("#sendmessage").addClass("show");
-          $("#errormessage").removeClass("show");
-          $('.contactForm').find("input, textarea").val("");
-        } else {
-          $("#sendmessage").removeClass("show");
-          $("#errormessage").addClass("show");
-          $('#errormessage').html(msg);
-        }
 
-      }
-    });
+    if (ferror) {
+      var str = $(this).serialize();
+      console.log("Your message was NOT sent!");
+
+          $("#sendmessage").removeClass("show");
+          // $("#errormessage").addClass("show");
+          // $('#errormessage').html("Please fill out all fields ");
+
+
+      return false;
+    } else {
+      var str = $(this).serialize();
+      $("#sendmessage").addClass("show");
+          // $("#errormessage").removeClass("show");
+          $('.contactForm').find("input, textarea").val("");
+
+      console.log("You message has been sent!")
+      return false;
+    }
+    // $.ajax({
+    //   type: "POST",
+    //   url: "contactform.php",
+    //   data: str,
+    //   success: function(msg) {
+    //     // alert(msg);
+    //     if (msg == 'OK') {
+          // $("#sendmessage").addClass("show");
+          // $("#errormessage").removeClass("show");
+          // $('.contactForm').find("input, textarea").val("");
+    //     } else {
+          // $("#sendmessage").removeClass("show");
+          // $("#errormessage").addClass("show");
+          // $('#errormessage').html(msg);
+    //     }
+
+    //   }
+    // });
     return false;
   });
 
