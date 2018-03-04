@@ -5,9 +5,9 @@ I used a bootstrap template as the backbone for my website. More information is 
 
 ### Template
 
-Theme Name: Regna
-Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-Author: BootstrapMade.com
+Theme Name: Regna <br />
+Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/ <br />
+Author: BootstrapMade.com <br />
 Author URL: https://bootstrapmade.com
 
 ### Browser support
